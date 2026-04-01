@@ -1,0 +1,73 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blurSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+    <filter id="blurPetal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" />
+    </filter>
+    <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8A9B70" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#6F7F56" stop-opacity="0.2" />
+    </linearGradient>
+    <radialGradient id="ranunculusA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F9E8DB" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#EFC6BD" stop-opacity="0.82" />
+      <stop offset="100%" stop-color="#D28EA0" stop-opacity="0.28" />
+    </radialGradient>
+    <radialGradient id="ranunculusB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF3E7" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#F2D7C7" stop-opacity="0.78" />
+      <stop offset="100%" stop-color="#DDA8A1" stop-opacity="0.24" />
+    </radialGradient>
+    <radialGradient id="tulipPink" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#F7D9D2" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#DFA0A8" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#C27B87" stop-opacity="0.22" />
+    </radialGradient>
+    <radialGradient id="tulipPeach" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#F9E7D9" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#EDC3A8" stop-opacity="0.76" />
+      <stop offset="100%" stop-color="#D39F89" stop-opacity="0.24" />
+    </radialGradient>
+    <radialGradient id="leafWash" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#CCD2AE" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#A8B08A" stop-opacity="0.1" />
+    </radialGradient>
+  </defs>
+
+  <g opacity="0.72" filter="url(#blurSoft)">
+    <ellipse cx="185" cy="180" rx="88" ry="132" fill="url(#tulipPink)" transform="rotate(-24 185 180)" />
+    <ellipse cx="255" cy="148" rx="72" ry="110" fill="url(#tulipPeach)" transform="rotate(8 255 148)" />
+    <ellipse cx="327" cy="208" rx="78" ry="122" fill="url(#tulipPink)" transform="rotate(28 327 208)" />
+    <path d="M250 240C232 320 210 432 206 548" stroke="url(#stem)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M231 369C164 337 141 311 117 248" stroke="url(#stem)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M223 418C145 433 102 463 66 527" stroke="url(#stem)" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="152" cy="305" rx="46" ry="93" fill="url(#leafWash)" transform="rotate(-48 152 305)" />
+    <ellipse cx="122" cy="474" rx="44" ry="84" fill="url(#leafWash)" transform="rotate(34 122 474)" />
+  </g>
+
+  <g opacity="0.8" filter="url(#blurPetal)">
+    <circle cx="482" cy="430" r="102" fill="url(#ranunculusA)" />
+    <circle cx="482" cy="430" r="77" fill="url(#ranunculusB)" />
+    <circle cx="482" cy="430" r="52" fill="url(#ranunculusA)" />
+    <circle cx="482" cy="430" r="30" fill="#F8EFE5" fill-opacity="0.82" />
+
+    <circle cx="640" cy="540" r="84" fill="url(#ranunculusB)" />
+    <circle cx="640" cy="540" r="62" fill="url(#ranunculusA)" />
+    <circle cx="640" cy="540" r="40" fill="url(#ranunculusB)" />
+
+    <path d="M499 522C483 610 458 712 430 816" stroke="url(#stem)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M627 619C617 696 613 782 625 886" stroke="url(#stem)" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="438" cy="650" rx="40" ry="88" fill="url(#leafWash)" transform="rotate(-28 438 650)" />
+    <ellipse cx="604" cy="742" rx="40" ry="88" fill="url(#leafWash)" transform="rotate(24 604 742)" />
+  </g>
+
+  <g opacity="0.65" filter="url(#blurSoft)">
+    <ellipse cx="286" cy="932" rx="74" ry="116" fill="url(#tulipPeach)" transform="rotate(-12 286 932)" />
+    <ellipse cx="350" cy="900" rx="66" ry="100" fill="url(#tulipPink)" transform="rotate(22 350 900)" />
+    <ellipse cx="408" cy="954" rx="76" ry="108" fill="url(#tulipPeach)" transform="rotate(34 408 954)" />
+    <path d="M340 989C326 1050 309 1114 295 1180" stroke="url(#stem)" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="248" cy="1068" rx="42" ry="84" fill="url(#leafWash)" transform="rotate(-36 248 1068)" />
+  </g>
+</svg>

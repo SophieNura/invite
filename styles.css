@@ -46,6 +46,51 @@ a {
   overflow: hidden;
 }
 
+.watercolor {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.78;
+  background-image: url("images/watercolor-floral.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.watercolor--hero-left {
+  top: 0;
+  left: -8rem;
+  width: 29rem;
+  height: 38rem;
+  transform: rotate(-7deg);
+}
+
+.watercolor--hero-right {
+  top: 7rem;
+  right: -9rem;
+  width: 30rem;
+  height: 40rem;
+  transform: scaleX(-1) rotate(-2deg);
+}
+
+.watercolor--middle {
+  top: 62rem;
+  left: -7rem;
+  width: 22rem;
+  height: 30rem;
+  opacity: 0.42;
+  transform: rotate(-12deg);
+}
+
+.watercolor--bottom {
+  right: -8rem;
+  bottom: 4rem;
+  width: 24rem;
+  height: 32rem;
+  opacity: 0.46;
+  transform: scaleX(-1) rotate(6deg);
+}
+
 .background-glow {
   position: fixed;
   z-index: 0;
@@ -72,7 +117,7 @@ a {
 .hero,
 .section {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
 }
@@ -322,6 +367,18 @@ h3 {
 }
 
 @media (max-width: 900px) {
+  .watercolor--hero-left,
+  .watercolor--hero-right {
+    opacity: 0.5;
+    width: 19rem;
+    height: 26rem;
+  }
+
+  .watercolor--middle,
+  .watercolor--bottom {
+    opacity: 0.35;
+  }
+
   .hero__meta,
   .details-grid,
   .mood-layout,
@@ -340,6 +397,21 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .watercolor--hero-left {
+    left: -8rem;
+    top: 2rem;
+  }
+
+  .watercolor--hero-right {
+    right: -8rem;
+    top: 20rem;
+  }
+
+  .watercolor--middle,
+  .watercolor--bottom {
+    display: none;
+  }
+
   .hero,
   .section {
     width: min(100% - 1.2rem, 40rem);
