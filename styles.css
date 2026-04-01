@@ -93,6 +93,12 @@ a {
   transform: scaleX(-1) rotate(6deg);
 }
 
+.watercolor--mobile-top,
+.watercolor--mobile-middle,
+.watercolor--mobile-bottom {
+  display: none;
+}
+
 .background-glow {
   position: fixed;
   z-index: 0;
@@ -211,7 +217,7 @@ h3 {
 .meta-card {
   overflow: hidden;
   padding: 1.1rem 1rem;
-  border-radius: 55% 45% 54% 46% / 43% 57% 43% 57%;
+  border-radius: 47% 53% 44% 56% / 59% 41% 59% 41%;
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.82), transparent 28%),
     linear-gradient(180deg, rgba(255, 250, 245, 0.88), rgba(244, 233, 223, 0.72));
@@ -224,10 +230,6 @@ h3 {
   border-radius: inherit;
   border: 1px solid rgba(141, 91, 79, 0.12);
   pointer-events: none;
-}
-
-.meta-card:nth-child(3) {
-  border-radius: 47% 53% 44% 56% / 59% 41% 59% 41%;
 }
 
 .meta-card span,
@@ -511,7 +513,7 @@ h3 {
   }
 
   .meta-card {
-    border-radius: 999px;
+    border-radius: 47% 53% 44% 56% / 59% 41% 59% 41%;
     clip-path: none;
   }
 }
@@ -520,16 +522,70 @@ h3 {
   .watercolor--hero-left {
     left: -8rem;
     top: 2rem;
+    width: 18rem;
+    height: 24rem;
+    opacity: 0.72;
   }
 
   .watercolor--hero-right {
     right: -8rem;
     top: 20rem;
+    width: 19rem;
+    height: 25rem;
+    opacity: 0.7;
   }
 
-  .watercolor--middle,
+  .watercolor--middle {
+    display: block;
+    left: -8rem;
+    top: 56rem;
+    width: 18rem;
+    height: 24rem;
+    opacity: 0.52;
+    transform: rotate(-10deg);
+  }
+
   .watercolor--bottom {
-    display: none;
+    display: block;
+    right: -8rem;
+    bottom: 14rem;
+    width: 19rem;
+    height: 25rem;
+    opacity: 0.5;
+    transform: scaleX(-1) rotate(10deg);
+  }
+
+  .watercolor--mobile-top,
+  .watercolor--mobile-middle,
+  .watercolor--mobile-bottom {
+    display: block;
+  }
+
+  .watercolor--mobile-top {
+    top: 30rem;
+    right: -7rem;
+    width: 16rem;
+    height: 22rem;
+    opacity: 0.44;
+    transform: rotate(18deg);
+  }
+
+  .watercolor--mobile-middle {
+    left: -7rem;
+    top: 88rem;
+    width: 17rem;
+    height: 23rem;
+    opacity: 0.42;
+    transform: scaleX(-1) rotate(-20deg);
+  }
+
+  .watercolor--mobile-bottom {
+    right: -7rem;
+    bottom: 42rem;
+    width: 16rem;
+    height: 22rem;
+    opacity: 0.4;
+    transform: rotate(12deg);
   }
 
   .hero,
