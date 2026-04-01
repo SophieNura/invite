@@ -515,7 +515,7 @@ h3 {
   }
 
   .meta-card {
-    border-radius: 1.6rem;
+    border-radius: 999px;
     clip-path: none;
   }
 }
