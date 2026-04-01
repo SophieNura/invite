@@ -3,6 +3,8 @@
   --bg-deep: #e7d6c7;
   --surface: rgba(255, 250, 244, 0.68);
   --surface-strong: rgba(255, 248, 240, 0.84);
+  --paper: rgba(255, 249, 241, 0.92);
+  --paper-shadow: rgba(169, 129, 110, 0.18);
   --line: rgba(111, 79, 62, 0.16);
   --text: #3d2b21;
   --muted: #7e6657;
@@ -199,6 +201,7 @@ h3 {
 .mood-panel,
 .letter-card,
 .finale-card {
+  position: relative;
   backdrop-filter: blur(14px);
   background: var(--surface);
   border: 1px solid var(--line);
@@ -206,8 +209,29 @@ h3 {
 }
 
 .meta-card {
+  overflow: hidden;
   padding: 1.1rem 1rem;
-  border-radius: 999px;
+  border-radius: 42% 58% 48% 52% / 45% 45% 55% 55%;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.82), transparent 28%),
+    linear-gradient(180deg, rgba(255, 250, 245, 0.88), rgba(244, 233, 223, 0.72));
+}
+
+.meta-card:nth-child(2) {
+  border-radius: 55% 45% 54% 46% / 43% 57% 43% 57%;
+}
+
+.meta-card:nth-child(3) {
+  border-radius: 47% 53% 44% 56% / 59% 41% 59% 41%;
+}
+
+.meta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.35rem;
+  border-radius: inherit;
+  border: 1px solid rgba(141, 91, 79, 0.12);
+  pointer-events: none;
 }
 
 .meta-card span,
@@ -261,9 +285,28 @@ h3 {
 }
 
 .letter-card {
+  overflow: hidden;
   max-width: 52rem;
-  padding: 2rem;
-  border-radius: var(--radius-xl);
+  padding: 2rem 2rem 2.1rem;
+  border: none;
+  border-radius: 2.5rem;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.75), transparent 20%),
+    radial-gradient(circle at 78% 76%, rgba(221, 175, 157, 0.22), transparent 26%),
+    radial-gradient(circle at 60% 22%, rgba(241, 219, 206, 0.54), transparent 32%),
+    linear-gradient(180deg, rgba(254, 248, 242, 0.92), rgba(242, 228, 217, 0.82));
+  box-shadow:
+    0 30px 70px rgba(91, 60, 45, 0.11),
+    inset 0 0 0 1px rgba(141, 91, 79, 0.1);
+}
+
+.letter-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.85rem;
+  border-radius: 2.05rem;
+  border: 1px solid rgba(141, 91, 79, 0.14);
+  pointer-events: none;
 }
 
 .signature {
@@ -278,14 +321,55 @@ h3 {
 }
 
 .detail-card {
+  overflow: hidden;
   min-height: 16rem;
-  padding: 1.6rem;
-  border-radius: var(--radius-lg);
+  padding: 2rem 2rem 2.1rem;
+  border: none;
+  border-radius: 2.5rem;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.75), transparent 20%),
+    radial-gradient(circle at 78% 76%, rgba(221, 175, 157, 0.22), transparent 26%),
+    radial-gradient(circle at 60% 22%, rgba(241, 219, 206, 0.56), transparent 32%),
+    linear-gradient(180deg, rgba(254, 248, 242, 0.92), rgba(242, 228, 217, 0.82));
+  box-shadow:
+    0 30px 70px rgba(91, 60, 45, 0.11),
+    inset 0 0 0 1px rgba(141, 91, 79, 0.1);
+}
+
+.detail-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.85rem;
+  border-radius: 2.05rem;
+  border: 1px solid rgba(141, 91, 79, 0.14);
+  pointer-events: none;
+}
+
+.detail-card:nth-child(2) {
+  border-radius: 2.7rem;
+}
+
+.detail-card:nth-child(2)::before {
+  border-radius: 2.2rem;
+}
+
+.detail-card:nth-child(3) {
+  border-radius: 2.6rem;
+}
+
+.detail-card:nth-child(3)::before {
+  border-radius: 2.15rem;
 }
 
 .detail-card h3,
 .mood-panel h3 {
   margin-bottom: 0.8rem;
+}
+
+.detail-card h3 {
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  line-height: 1.02;
+  max-width: 12ch;
 }
 
 .mood-layout {
@@ -295,15 +379,36 @@ h3 {
 }
 
 .mood-panel {
+  overflow: hidden;
   min-height: 18rem;
-  padding: 1.7rem;
-  border-radius: var(--radius-lg);
+  padding: 2rem 2rem 2.1rem;
+  border: none;
+  border-radius: 2.5rem;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.75), transparent 20%),
+    radial-gradient(circle at 78% 76%, rgba(221, 175, 157, 0.22), transparent 26%),
+    radial-gradient(circle at 60% 22%, rgba(241, 219, 206, 0.56), transparent 32%),
+    linear-gradient(180deg, rgba(254, 248, 242, 0.92), rgba(242, 228, 217, 0.82));
+  box-shadow:
+    0 30px 70px rgba(91, 60, 45, 0.11),
+    inset 0 0 0 1px rgba(141, 91, 79, 0.1);
+}
+
+.mood-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0.85rem;
+  border-radius: 2.05rem;
+  border: 1px solid rgba(141, 91, 79, 0.14);
+  pointer-events: none;
 }
 
 .mood-panel--large {
-  background:
-    linear-gradient(180deg, rgba(255, 250, 245, 0.86), rgba(237, 221, 210, 0.76)),
-    var(--surface);
+  border-radius: 2.7rem;
+}
+
+.mood-panel--large::before {
+  border-radius: 2.2rem;
 }
 
 .gallery-layout {
@@ -350,7 +455,25 @@ h3 {
   margin: 0 auto;
   padding: 2.2rem;
   text-align: center;
-  border-radius: var(--radius-xl);
+  border: none;
+  border-radius: 40% 60% 52% 48% / 18% 22% 26% 24%;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.75), transparent 20%),
+    radial-gradient(circle at 78% 76%, rgba(221, 175, 157, 0.28), transparent 26%),
+    radial-gradient(circle at 60% 22%, rgba(241, 219, 206, 0.58), transparent 32%),
+    linear-gradient(180deg, rgba(254, 248, 242, 0.92), rgba(242, 228, 217, 0.82));
+  box-shadow:
+    0 30px 70px rgba(91, 60, 45, 0.11),
+    inset 0 0 0 1px rgba(141, 91, 79, 0.1);
+}
+
+.finale-card::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 42% 58% 48% 52% / 18% 22% 28% 24%;
+  border: 1px solid rgba(141, 91, 79, 0.14);
+  pointer-events: none;
 }
 
 .reveal {
@@ -392,7 +515,8 @@ h3 {
   }
 
   .meta-card {
-    border-radius: var(--radius-md);
+    border-radius: 1.6rem;
+    clip-path: none;
   }
 }
 
@@ -439,6 +563,16 @@ h3 {
   .mood-panel,
   .finale-card {
     padding: 1.35rem;
+  }
+
+  .letter-card,
+  .letter-card::before,
+  .detail-card,
+  .detail-card::before,
+  .finale-card,
+  .finale-card::before {
+    clip-path: none;
+    border-radius: 1.7rem;
   }
 
   .gallery-photo__frame {
